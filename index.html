@@ -1,0 +1,159 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>EyeBreaks — Protect Your Eyes with the 20-20-20 Rule</title>
+    <meta
+      name="description"
+      content="A lightweight macOS menu bar app that enforces the 20-20-20 rule. Take breaks, blink more, reduce eye strain. Local-only, no telemetry."
+    />
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <section class="hero">
+      <img
+        class="ghost-mascot"
+        src="./assets/blink.svg"
+        alt="Blinking ghost mascot"
+      />
+
+      <h1>Eye<span>Breaks</span></h1>
+      <p class="scaring-good">Scaring good.</p>
+      <p class="tagline">
+        A tiny macOS app that reminds you to rest your eyes. No tracking. No
+        network. Just healthier eyes.
+      </p>
+
+      <a href="#download" class="download-btn">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke="currentColor"
+          stroke-width="2"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"
+          />
+        </svg>
+        Download for Mac
+      </a>
+      <p class="requirements">Requires macOS 14+ · Apple Silicon</p>
+    </section>
+
+    <section class="features">
+      <h2>Built for Focus</h2>
+      <div class="feature-grid">
+        <div class="glass feature-card">
+          <div class="feature-icon">⏱</div>
+          <h3>Menu Bar Timer</h3>
+          <p>
+            Always visible countdown in your menu bar. Know exactly when your
+            next break is coming.
+          </p>
+        </div>
+        <div class="glass feature-card">
+          <div class="feature-icon">🪟</div>
+          <h3>Frosted Overlay</h3>
+          <p>
+            Gentle full-screen overlay on all displays. ESC to dismiss
+            anytime; you're always in control.
+          </p>
+        </div>
+        <div class="glass feature-card">
+          <div class="feature-icon">👻</div>
+          <h3>Blink Reminders</h3>
+          <p>
+            Soft visual cues every few minutes, including your blinking ghost,
+            to help reduce dry eyes naturally.
+          </p>
+        </div>
+        <div class="glass feature-card">
+          <div class="feature-icon">📹</div>
+          <h3>Meeting Aware</h3>
+          <p>
+            Detects when your camera is on and waits until your call ends.
+            Never interrupted mid-meeting.
+          </p>
+        </div>
+        <div class="glass feature-card">
+          <div class="feature-icon">💤</div>
+          <h3>Idle Detection</h3>
+          <p>
+            Pauses when you step away. Prompts to resume or restart when you
+            return.
+          </p>
+        </div>
+        <div class="glass feature-card">
+          <div class="feature-icon">⚙️</div>
+          <h3>Fully Customizable</h3>
+          <p>
+            Adjust intervals, durations, snooze times, and more. Make it work
+            the way you work.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="privacy">
+      <div class="glass privacy-card">
+        <h2>Privacy First. Always.</h2>
+        <p>
+          EyeBreaks runs entirely on your Mac. No accounts, no cloud, no
+          analytics. Your data stays yours.
+        </p>
+        <div class="privacy-badges">
+          <span class="badge"><span class="badge-icon">✓</span> No network calls</span>
+          <span class="badge"><span class="badge-icon">✓</span> No telemetry</span>
+          <span class="badge"><span class="badge-icon">✓</span> No screen recording</span>
+          <span class="badge"><span class="badge-icon">✓</span> Local settings only</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="how-it-works" id="download">
+      <h2>Install EyeBreaks (Not Notarized)</h2>
+      <p class="install-warning glass">
+        EyeBreaks is currently distributed <strong>without Apple notarization</strong>.
+        macOS may show security warnings on first launch.
+      </p>
+      <p class="section-copy section-copy-spaced">
+        Download the DMG, open it, and drag <code>EyeBreaks.app</code> to
+        <code>Applications</code>.
+      </p>
+      <a href="./EyeBreaks-latest.dmg" class="download-btn">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke="currentColor"
+          stroke-width="2"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"
+          />
+        </svg>
+        Download Latest DMG
+      </a>
+      <ol class="install-steps glass">
+        <li>Double-click <code>EyeBreaks-latest.dmg</code> and drag <code>EyeBreaks.app</code> to <code>Applications</code>.</li>
+        <li>Right-click <code>/Applications/EyeBreaks.app</code> and choose <strong>Open</strong>.</li>
+        <li>If macOS still blocks launch, open Terminal and run:</li>
+      </ol>
+      <pre class="install-code"><code>xattr -dr com.apple.quarantine /Applications/EyeBreaks.app
+open /Applications/EyeBreaks.app</code></pre>
+      <p class="requirements">macOS 14+ · Apple Silicon · Local-only app</p>
+    </section>
+
+    <footer>
+      <p>
+        Made with care for your eyes.
+      </p>
+    </footer>
+  </body>
+</html>

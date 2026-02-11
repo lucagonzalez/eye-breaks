@@ -1,0 +1,320 @@
+:root {
+  --accent: #4db8ff;
+  --accent-soft: rgba(77, 184, 255, 0.15);
+  --bg-dark: #0a0a0f;
+  --bg-glass: rgba(255, 255, 255, 0.05);
+  --border-glass: rgba(255, 255, 255, 0.1);
+  --text-primary: #ffffff;
+  --text-muted: rgba(255, 255, 255, 0.6);
+  --shadow-glow: 0 0 60px rgba(77, 184, 255, 0.15);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family:
+    -apple-system, BlinkMacSystemFont, "SF Pro Display", "Segoe UI", Roboto,
+    sans-serif;
+  background: var(--bg-dark);
+  color: var(--text-primary);
+  line-height: 1.6;
+  min-height: 100vh;
+}
+
+.glass {
+  background: var(--bg-glass);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid var(--border-glass);
+  border-radius: 24px;
+}
+
+.container {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+.hero {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 48px 24px;
+  position: relative;
+  overflow: hidden;
+}
+
+.hero::before {
+  content: "";
+  position: absolute;
+  top: -50%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 800px;
+  height: 800px;
+  background: radial-gradient(
+    circle,
+    rgba(77, 184, 255, 0.08) 0%,
+    transparent 70%
+  );
+  pointer-events: none;
+}
+
+.ghost-mascot {
+  width: 180px;
+  height: 140px;
+  margin-bottom: 32px;
+  filter: drop-shadow(0 0 30px rgba(77, 184, 255, 0.3));
+}
+
+.hero h1 {
+  font-size: clamp(2.5rem, 6vw, 4rem);
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  margin-bottom: 16px;
+  z-index: 1;
+}
+
+.hero h1 span {
+  color: var(--accent);
+}
+
+.scaring-good {
+  color: var(--accent);
+  background: var(--accent-soft);
+  border: 1px solid rgba(77, 184, 255, 0.4);
+  border-radius: 999px;
+  padding: 6px 16px;
+  font-size: 0.95rem;
+  font-weight: 650;
+  letter-spacing: 0.03em;
+  margin-bottom: 16px;
+  z-index: 1;
+}
+
+.tagline {
+  font-size: clamp(1.1rem, 2.5vw, 1.4rem);
+  color: var(--text-muted);
+  max-width: 500px;
+  margin-bottom: 40px;
+  z-index: 1;
+}
+
+.download-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  padding: 18px 36px;
+  background: var(--accent);
+  color: var(--bg-dark);
+  text-decoration: none;
+  border-radius: 14px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  transition:
+    transform 0.2s,
+    box-shadow 0.2s;
+  box-shadow: var(--shadow-glow);
+  z-index: 1;
+}
+
+.download-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 0 80px rgba(77, 184, 255, 0.25);
+}
+
+.download-btn svg {
+  width: 20px;
+  height: 20px;
+}
+
+.requirements {
+  margin-top: 16px;
+  font-size: 0.9rem;
+  color: var(--text-muted);
+  z-index: 1;
+}
+
+.features {
+  padding: 100px 24px;
+}
+
+.features h2 {
+  text-align: center;
+  font-size: clamp(1.8rem, 4vw, 2.5rem);
+  margin-bottom: 60px;
+}
+
+.feature-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 24px;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.feature-card {
+  padding: 32px;
+  text-align: center;
+}
+
+.feature-icon {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+}
+
+.feature-card h3 {
+  font-size: 1.3rem;
+  margin-bottom: 12px;
+  color: var(--accent);
+}
+
+.feature-card p {
+  color: var(--text-muted);
+  font-size: 1rem;
+}
+
+.how-it-works {
+  padding: 80px 24px;
+  text-align: center;
+}
+
+.how-it-works h2 {
+  font-size: clamp(1.8rem, 4vw, 2.5rem);
+  margin-bottom: 20px;
+}
+
+.section-copy {
+  color: var(--text-muted);
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+.section-copy-spaced {
+  margin: 0 auto 32px;
+}
+
+.install-warning {
+  max-width: 720px;
+  margin: 0 auto 20px;
+  padding: 16px 20px;
+  color: #d8ecff;
+  border-color: rgba(77, 184, 255, 0.35);
+}
+
+.install-steps {
+  max-width: 760px;
+  margin: 28px auto 16px;
+  padding: 18px 24px 18px 42px;
+  text-align: left;
+  color: var(--text-muted);
+}
+
+.install-steps li {
+  margin: 0 0 10px;
+}
+
+.install-steps li:last-child {
+  margin-bottom: 0;
+}
+
+.install-code {
+  width: min(760px, calc(100% - 10px));
+  margin: 0 auto;
+  padding: 16px 18px;
+  text-align: left;
+  background: rgba(255, 255, 255, 0.07);
+  border: 1px solid rgba(77, 184, 255, 0.3);
+  border-radius: 14px;
+  color: #d9efff;
+  overflow-x: auto;
+}
+
+.install-code code {
+  font-family:
+    ui-monospace, SFMono-Regular, SF Mono, Menlo, Monaco, Consolas,
+    Liberation Mono, monospace;
+  font-size: 0.92rem;
+  line-height: 1.5;
+}
+
+.privacy {
+  padding: 80px 24px;
+  text-align: center;
+}
+
+.privacy-card {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 48px;
+}
+
+.privacy h2 {
+  font-size: clamp(1.6rem, 3vw, 2rem);
+  margin-bottom: 20px;
+}
+
+.privacy p {
+  color: var(--text-muted);
+  font-size: 1.1rem;
+  line-height: 1.8;
+}
+
+.privacy-badges {
+  display: flex;
+  justify-content: center;
+  gap: 32px;
+  margin-top: 32px;
+  flex-wrap: wrap;
+}
+
+.badge {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: var(--text-muted);
+  font-size: 0.95rem;
+}
+
+.badge-icon {
+  color: var(--accent);
+}
+
+footer {
+  padding: 40px 24px;
+  text-align: center;
+  color: var(--text-muted);
+  font-size: 0.9rem;
+  border-top: 1px solid var(--border-glass);
+}
+
+footer a {
+  color: var(--accent);
+  text-decoration: none;
+}
+
+footer a:hover {
+  text-decoration: underline;
+}
+
+@media (max-width: 600px) {
+  .install-steps {
+    padding-right: 16px;
+  }
+
+  .privacy-badges {
+    flex-direction: column;
+    align-items: center;
+  }
+}
